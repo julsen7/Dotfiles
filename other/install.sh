@@ -16,29 +16,29 @@ if ! command -v yay &> /dev/null; then
     rm -rf "$YAY_DIR"
 fi
 
-if [[ -f "$OTHER_DIR/pkglist.txt" ]]; then
-    echo "==> Installiere offizielle Pakete aus $OTHER_DIR/pkglist.txt..."
+if [[ -f "pkglist.txt" ]]; then
+    echo "==> Installiere offizielle Pakete aus pkglist.txt..."
     
     while IFS= read -r package || [[ -n "$package" ]]; do
         [[ -z "$package" || "$package" =~ ^# ]] && continue
         
         echo "    Installiere: $package"
         sudo pacman -S --needed --noconfirm "$package" || echo "[FEHLER] Paket $package konnte nicht installiert werden!"
-    done < "$OTHER_DIR/pkglist.txt"
+    done < "pkglist.txt"
 else
-    echo "[WARNUNG] $OTHER_DIR/pkglist.txt nicht gefunden!"
+    echo "[WARNUNG] pkglist.txt nicht gefunden!"
 fi
 
-if [[ -f "$OTHER_DIR/aurlist.txt" ]]; then
-    echo "==> Installiere AUR-Pakete aus $OTHER_DIR/aurlist.txt..."
+if [[ -f "aurlist.txt" ]]; then
+    echo "==> Installiere AUR-Pakete aus aurlist.txt..."
     while IFS= read -r package || [[ -n "$package" ]]; do
         [[ -z "$package" || "$package" =~ ^# ]] && continue
         
         echo "    Installiere AUR: $package"
         yay -S --needed --noconfirm "$package" || echo "[FEHLER] AUR-Paket $package konnte nicht installiert werden!"
-    done < "$OTHER_DIR/aurlist.txt"
+    done < "aurlist.txt"
 else
-    echo "[INFO] Keine AUR-Paketliste in $OTHER_DIR/ gefunden."
+    echo "[INFO] Keine AUR-Paketliste gefunden."
 fi
 
 echo "==> Verlinke Dotfiles mit GNU Stow..."
