@@ -1,4 +1,8 @@
 7zip
+amd-ucode
+archiso
+base
+base-devel
 bluetui
 bluez
 bluez-utils
@@ -6,7 +10,6 @@ brightnessctl
 btop
 chromium
 discord
-durdraw
 easyeffects
 efibootmgr
 eza
@@ -14,6 +17,7 @@ fastfetch
 filezilla
 fwupd
 fzf
+git
 gnome-themes-extra
 gst-plugin-pipewire
 hyprland
@@ -55,6 +59,7 @@ sof-firmware
 spotify-launcher
 starship
 steam
+stow
 sudo
 ttf-jetbrains-mono-nerd
 udisks2
