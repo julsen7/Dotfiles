@@ -21,7 +21,7 @@ sudo pacman -S --needed --noconfirm base-devel git stow
 if ! command -v yay &> /dev/null; then
     echo "==> Installiere yay (AUR-Helper)..."
     YAY_DIR=$(mktemp -d)
-    git clone https://archlinux.org "$YAY_DIR"
+    git clone https://aur.archlinux.org/yay.git "$YAY_DIR"
     (cd "$YAY_DIR" && makepkg -si --noconfirm)
     rm -rf "$YAY_DIR"
 fi
