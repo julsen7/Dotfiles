@@ -14,7 +14,7 @@ Complete the manual base installation and create a non-root user with sudo privi
 ## Step-by-Step Configuration
 
 ### 2. Install Required Packages
-Ensure you are logged into your new system (or inside the chroot environment) and install the necessary base utilities:
+Ensure you are logged into your new system and install the necessary base utilities:
 ```bash
 sudo pacman -S base linux linux-firmware nano sudo stow
 sudo pacman -S --needed git base-devel
@@ -25,8 +25,8 @@ Enable and configure the built-in systemd network daemon for wired connections.
 
 1. Enable the network and DNS services:
    ```bash
-   systemctl enable --now systemd-networkd
-   systemctl enable --now systemd-resolved
+   sudo systemctl enable --now systemd-networkd
+   sudo systemctl enable --now systemd-resolved
    ```
 2. Create a network configuration file:
    ```bash
@@ -42,42 +42,21 @@ Enable and configure the built-in systemd network daemon for wired connections.
    ```
 4. Verify your internet connection:
    ```bash
-   ping google.com
-   ```
-
-### 4. Enable Multilib Repository
-Required for running 32-bit applications (e.g., Steam, Wine).
-
-1. Open the pacman configuration file:
-   ```bash
-   sudo nano /etc/pacman.conf
-   ```
-2. Scroll down and uncomment the `[multilib]` section by removing the `#` symbols:
-   ```ini
-   [multilib]
-   Include = /etc/pacman.d/mirrorlist
-   ```
-3. Synchronize the package databases and update the system:
-   ```bash
-   sudo pacman -Syu
+   ping -c 3 google.com
    ```
 
 ---
 
 ## Dotfiles & Software Deployment
 
-### 5. Clone and Stow Dotfiles
-Clone your personal configuration files into your home directory and link them using `stow`.
+### 4. Clone and Run the Installation Script
+Clone your personal configuration files into your home directory and execute the custom post-install script. 
+
+The script will automatically enable the **Multilib Repository**, install all official and AUR packages from your list, link your configurations via **GNU Stow**, and enable your system services.
+
 ```bash
 git clone https://github.com/julsen7/dotfiles
 cd ~/dotfiles
-stow .
-```
-
-### 6. Run the Installation Script
-Execute the custom post-install script to install the rest of your software environment:
-```bash
-cd ~/dotfiles/other
 chmod +x install.sh
 ./install.sh
 ```

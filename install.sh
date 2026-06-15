@@ -2,8 +2,8 @@
 
 set -euo pipefail
 
-SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
-MD_FILE="$SCRIPT_DIR/../archinstall.md"
+DOTFILES_DIR="$(dirname "$(readlink -f "$0")")"
+MD_FILE="$DOTFILES_DIR/Archinstall.md"
 
 echo "==> Starte vollautomatische Post-Installation..."
 
@@ -21,15 +21,13 @@ sudo pacman -S --needed --noconfirm base-devel git stow
 if ! command -v yay &> /dev/null; then
     echo "==> Installiere yay (AUR-Helper)..."
     YAY_DIR=$(mktemp -d)
-    git clone https://aur.archlinux.org/yay.git "$YAY_DIR"
+    git clone https://archlinux.org "$YAY_DIR"
     (cd "$YAY_DIR" && makepkg -si --noconfirm)
     rm -rf "$YAY_DIR"
 fi
 
 if [[ -f "$MD_FILE" ]]; then
-    echo "==> Lese Paketliste aus archinstall.md..."
-    
-    ALL_PACKAGES=$(grep -v '^#' "$MD_FILE" | grep -v '^-' | sed 's/^[ \t]*//;s/[ \t]*$//' | sed '/^$/d')
+    echo "==> Lese Paketliste aus Archinstall.md..."
     
     PACMAN_PKGS=""
     AUR_PKGS=""
@@ -42,12 +40,15 @@ if [[ -f "$MD_FILE" ]]; then
         fi
         [[ "$line" =~ ^# || "$line" =~ ^- || -z "$line" ]] && continue
         
+        line=$(echo "$line" | sed 's/^[ \t]*//;s/[ \t]*$//')
+        [[ -z "$line" ]] && continue
+
         if [ $IS_AUR -eq 1 ]; then
             AUR_PKGS="$AUR_PKGS $line"
         else
             PACMAN_PKGS="$PACMAN_PKGS $line"
         fi
-    done <<< "$(grep -v '^[[:space:]]*$' "$MD_FILE")"
+    done < "$MD_FILE"
 
     if [[ -n "$PACMAN_PKGS" ]]; then
         echo "==> Installiere offizielle Arch-Pakete..."
@@ -59,31 +60,17 @@ if [[ -f "$MD_FILE" ]]; then
         yay -S --needed --noconfirm $AUR_PKGS
     fi
 else
-    echo "[FEHLER] archinstall.md wurde unter $MD_FILE nicht gefunden!"
+    echo "[FEHLER] Archinstall.md wurde unter $MD_FILE nicht gefunden!"
     exit 1
 fi
-
-DOTFILES_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 
 if [[ -d "$DOTFILES_DIR" ]]; then
     echo "==> Verlinke Dotfiles mit GNU Stow..."
     cd "$DOTFILES_DIR"
     
-    for dir in */; do
-        dir=${dir%/}
-        if [[ "$dir" != ".git" && "$dir" != "other" ]]; then
-            echo "    Stowing: $dir"
-            stow -R "$dir"
-        fi
-    done
+    stow -R .
 else
     echo "[WARNUNG] Dotfiles-Ordner nicht gefunden! Überspringe Stowing."
-fi
-
-if [[ -f "$DOTFILES_DIR/config.ini" ]]; then
-    echo "==> Konfiguriere Ly Display Manager..."
-    sudo mkdir -p /etc/ly/
-    sudo cp "$DOTFILES_DIR/config.ini" /etc/ly/
 fi
 
 echo "==> Aktiviere Systemd-Dienste..."
