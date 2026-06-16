@@ -16,7 +16,11 @@ cd /tmp
 if [ -d "yay" ]; then rm -rf yay; fi
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si --noconfirm
+if [ "$EUID" -eq 0 ]; then
+    chown -R nobody:nobody .
+    sudo -u nobody makepkg -si --noconfirm
+else
+    makepkg -si --noconfirm
 fi
 
 cd "$DOTFILES_DIR"
