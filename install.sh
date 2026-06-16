@@ -3,100 +3,57 @@
 set -euo pipefail
 
 DOTFILES_DIR="$(dirname "$(readlink -f "$0")")"
-MD_FILE="$DOTFILES_DIR/Packages.md"
 
 echo "==> Starte Installation..."
 
-    echo "==> Aktiviere Multilib-Repository..."
-    nano sed -i '/\[multilib\]/,/Include/s/^#//' /etc/pacman.conf
-    
+echo "==> Aktiviere Multilib-Repository..."
+nano sed -i '/\[multilib\]/,/Include/s/^#//' /etc/pacman.conf
 
-    echo "==> Installiere yay (AUR-Helper)..."
-    YAY_DIR=$(mktemp -d)
-    git clone https://aur.archlinux.org/yay.git "$YAY_DIR"
-    (cd "$YAY_DIR" && makepkg -si --noconfirm)
-    rm -rf "$YAY_DIR"
-fi
+echo "==> Installiere yay (AUR-Helper)..."
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
 
 echo "==> Aktualisiere System-Datenbanken..."
 sudo pacman -Syu --noconfirm
 
-if [[ -f "$MD_FILE" ]]; then
-    echo "==> Lese Paketliste aus Packages.md..."
-    
-    PACMAN_PKGS=""
-    AUR_PKGS=""
-    IS_AUR=0
+PACKAGE_FILE="packages.md"
 
-    while IFS= read -r line || [[ -n "$line" ]]; do
-        if [[ "$line" =~ ^#[[:space:]]*YAY ]]; then
-            IS_AUR=1
-            continue
-        fi
-        [[ "$line" =~ ^# || "$line" =~ ^- || -z "$line" ]] && continue
-        
-        line=$(echo "$line" | sed 's/^[ \t]*//;s/[ \t]*$//')
-        [[ -z "$line" ]] && continue
-
-        if [ $IS_AUR -eq 1 ]; then
-            AUR_PKGS="$AUR_PKGS $line"
-        else
-            PACMAN_PKGS="$PACMAN_PKGS $line"
-        fi
-    done < "$MD_FILE"
-
-    if [[ -n "$PACMAN_PKGS" ]]; then
-        echo "==> Installiere offizielle Arch-Pakete..."
-        sudo pacman -S --needed --noconfirm $PACMAN_PKGS
-    fi
-
-    if [[ -n "$AUR_PKGS" ]]; then
-        echo "==> Installiere AUR-Pakete via yay..."
-        yay -S --needed --noconfirm $AUR_PKGS
-    fi
-else
-    echo "[ERROR] Packages.md nicht gefunden!"
+if [ ! -f "$PACKAGE_FILE" ]; then
+    echo "Error: $PACKAGE_FILE not found."
     exit 1
 fi
 
-if [[ -d "$DOTFILES_DIR" ]]; then
-    echo "==> Verlinke Dotfiles mit GNU Stow..."
-    cd "$DOTFILES_DIR"
-    stow -R .
-else
-    echo "[WARNUNG] Dotfiles-Ordner nicht gefunden! Überspringe."
-fi
+while IFS= read -r line || [ -n "$line" ]; do
+    trimmed=$(echo "$line" | xargs)
 
-if [[ -f "$DOTFILES_DIR/config.ini" ]]; then
-    echo "==> Kopiere ly Configuration..."
-    sudo mkdir -p /etc/ly/
-    sudo cp "$DOTFILES_DIR/config.ini" /etc/ly/
-else
-    echo "[WARNUNG] Ly config.ini nicht gefunden! Überspringe."
-fi
+    [[ -z "$trimmed" ]] && continue
+
+    [[ "$trimmed" =~ ^# ]] && continue
+
+    package=$(echo "$trimmed" | sed -E 's/^([-*]|([0-9]+\.))\s+//; s/`//g')
+
+    echo "Installing: $package"
+    yay -S --noconfirm "$package"
+done < "$PACKAGE_FILE"
+echo "All packages processed!"
+
+
+echo "==> Verlinke Dotfiles mit GNU Stow..."
+cd "$DOTFILES_DIR"
+stow -R .
+
+echo "==> Copy ly Configuration..."
+sudo mkdir -p /etc/ly/
+sudo cp "$DOTFILES_DIR/config.ini" /etc/ly/
 
 echo "==> Aktiviere Systemd-Dienste..."
-for service in systemd-networkd.service systemd-resolved.service bluetooth.service ly@tty1.service power-profiles-daemon.service; do
-    if systemctl list-unit-files | grep -q "^$service"; then
-        sudo systemctl enable --now "$service"
-    else
-        echo "[INFO] Dienst $service nicht gefunden. Überspringe."
-    fi
-done
+sudo systemctl enable --now ly@tty1.service
 
-WALLPAPER_DIR="$DOTFILES_DIR/wallpaper"
+echo "==> Generiere Wallpaper-Theme ..."
+wal -i "wallpapers/wallpaper.webp"
 
-if [[ -d "$DOTFILES_DIR" ]]; then
-    if [[ -f "$DOTFILES_DIR/wallpaper.webp" ]]; then
-        echo "==> Generiere Wallpaper-Theme ..."
-        wal -i "$WALLPAPER_DIR/wallpaper.webp"
-    else 
-        echo "[WARNUNG] Wallpaper nicht gefunden. Überspringe."
-    fi
-else
-    echo "[WARNUNG] Wallpaper-Ordner nicht gefunden! Überspringe."
-fi
 
-echo "========================================= "
-echo " Installation abgeschlossen! Starte neu."
-echo "========================================="
+echo "===================================== "
+echo " Installation finished! Please reboot."
+echo "======================================"
