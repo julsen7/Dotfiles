@@ -41,7 +41,6 @@ zsh-syntax-highlighting
 zoxide
 fzf
 eza
-stow
 fastfetch
 starship
 yazi
