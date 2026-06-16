@@ -1,3 +1,7 @@
+# Ignore this file and the install script
+^install\.sh$
+^\.stow-local-ignore$
+
 # Ignore all Markdown and ini files
 ^.*\.md$
 ^.*\.ini$
