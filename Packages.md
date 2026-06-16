@@ -1,8 +1,5 @@
 # Kernel & System-Basics
-amd-ucode
-efibootmgr
 fwupd
-power-profiles-daemon
 udisks2
 usb_modeswitch
 openssh
@@ -30,17 +27,7 @@ hyprpolkitagent
 xdg-desktop-portal-hyprland
 xdg-desktop-portal-gtk
 
-# Audio (Pipewire komplett)
-pipewire-pulse
-pipewire-jack
-pipewire-alsa
-wireplumber
 easyeffects
-gst-plugin-pipewire
-
-# Bluetooth
-bluez
-bluez-utils
 
 # Fonts
 noto-fonts
@@ -69,7 +56,6 @@ jq
 
 # Bibliotheken & System-Zusätze
 python-pywal
-sof-firmware
 piper
 openrgb
 jdk-openjdk
