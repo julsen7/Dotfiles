@@ -19,7 +19,7 @@ timedatectl set-ntp true
 *Skip this step if you are using a wired Ethernet connection.*
 ```bash
 iwctl station wlan0 connect <SSID> --passphrase <password>
-ping google.com
+ping -c 3 google.com
 ```
 
 ### Drive Partitioning & Formatting
@@ -120,11 +120,10 @@ pacman -S --needed git base-devel
 
 ### Wired Network Service (systemd-networkd)
 ```bash
-systemctl enable --now systemd-networkd
-systemctl enable --now systemd-resolved
+systemctl enable --now systemd-networkd systemd-resolved
 
 # Create network configuration profile
-sudo bash -c 'cat <<EOF > /etc/systemd/network/20-wire.network
+cat <<EOF > /etc/systemd/network/20-wire.network
 [Match]
 Name=en*
 
