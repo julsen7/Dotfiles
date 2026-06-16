@@ -41,7 +41,7 @@ gst-plugin-pipewire
 libpulse
 linux
 linux-firmware
-lcm2
+lvm2
 pipewire
 pipewire-alsa
 pipewire-jack
