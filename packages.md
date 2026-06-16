@@ -13,13 +13,13 @@ adwaita-qt5-git
 adwaita-qt6-git
 
 # Grafik & Treiber (AMD/NVIDIA)
-# mesa
-# lib32-mesa
-# vulkan-radeon
-# lib32-vulkan-radeon
-# nvidia-open
-# lib32-nvidia-utils
-# nvidia-prime
+mesa
+lib32-mesa
+vulkan-radeon
+lib32-vulkan-radeon
+nvidia-open
+lib32-nvidia-utils
+nvidia-prime
 
 # Oberfläche
 ly
@@ -62,6 +62,7 @@ eza
 # Bibliotheken & System-Zusätze
 7zip
 jdk-openjdk
+texlive
 # qt6ct
 
 # Apps
