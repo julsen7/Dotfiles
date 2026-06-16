@@ -19,18 +19,18 @@ timedatectl set-ntp true
 *Skip this step if you are using a wired Ethernet connection.*
 ```bash
 iwctl station wlan0 connect <SSID> --passphrase <password>
-ping -c 3 google.com
+ping google.com
 ```
 
 ### Drive Partitioning & Formatting
 ```bash
+fdisk /dev/nvme0n1
 # Partition drive /dev/nvme0n1 using fdisk:
 # Press 'g' to create a new GPT partition table.
 # Press 'n' -> 1 -> Enter -> +1G -> 't' -> 1 (EFI system partition)
 # Press 'n' -> 2 -> Enter -> +4G -> 't' -> 2 -> 19 (Linux swap)
 # Press 'n' -> 3 -> Enter -> Enter (Linux root partition)
 # Press 'w' to write changes and exit.
-fdisk /dev/nvme0n1
 
 # Create file systems
 mkfs.fat -F 32 /dev/nvme0n1p1
@@ -46,7 +46,7 @@ swapon /dev/nvme0n1p2
 ### System Pacstrap & Chroot
 ```bash
 pacstrap -K /mnt base linux linux-firmware nano sudo
-genfstab -U /mnt >> /mnt/etc/fstab
+genfstab -U /mnt > /mnt/etc/fstab
 arch-chroot /mnt
 ```
 
