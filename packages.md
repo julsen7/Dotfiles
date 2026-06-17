@@ -45,6 +45,7 @@ eza
 zoxide
 fzf
 nvidia-prime
+hyprpolkitagent
 
 
 udisks2
@@ -54,7 +55,6 @@ gnome-themes-extra-gtk2
 adwaita-qt5-git
 adwaita-qt6-git
 lib32-nvidia-utils
-hyprpolkitagent
 xdg-desktop-portal-hyprland
 qt6ct
 filezilla
