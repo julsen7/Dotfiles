@@ -40,11 +40,14 @@ bibata-cursor-git
 nmtui-go
 wlogout
 heroic-games-launcher-bin
+brightnessctl
+eza
+zoxide
+fzf
 
 
 udisks2
 usb_modeswitch
-brightnessctl
 gnome-themes-extra
 gnome-themes-extra-gtk2
 adwaita-qt5-git
@@ -53,11 +56,6 @@ lib32-nvidia-utils
 nvidia-prime
 hyprpolkitagent
 xdg-desktop-portal-hyprland
-xdg-desktop-portal-gtk
-zoxide
-fzf
-eza
-jq
 qt6ct
 filezilla
 easyeffects
