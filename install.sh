@@ -60,9 +60,9 @@ else
 fi
 
 echo "==> Activating Services..."
-sudo systemctl enable --now NetworkManager
-sudo systemctl enable --now ly@tty1.service
-systemctl --user enable --now hyprpolkitagent
+sudo systemctl enable NetworkManager
+sudo systemctl enable ly@tty1.service
+systemctl --user enable hyprpolkitagent
 
 echo "==> Activating waybar scripts"
 if [ -d "$DOTFILES_DIR/.config/waybar" ]; then
