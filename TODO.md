@@ -1,5 +1,6 @@
-- waybar: updates, timer colors
+- waybar: updates, timer colors, wireplumber errors
 - discord streaming (xdg-desktop-portal-hyprland)
 - win + p-ähnliches projizieren
 - bluetooth-tethering
 - [clipboardhistory](https://wiki.archlinux.org/title/Clipboard) cliphist
+-  nvidia analog zu radeontop tui

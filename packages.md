@@ -49,6 +49,7 @@ udisks2
 udiskie
 lib32-nvidia-utils
 
+davinci-resolve
 filezilla
 easyeffects
 piper
