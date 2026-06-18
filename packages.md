@@ -44,6 +44,7 @@ eza
 zoxide
 fzf
 github-cli
+xdg-desktop-portal-hyprland
 
 # steam
 # obs-studio
@@ -61,5 +62,4 @@ github-cli
 
 # paint.net alternative
 # filezilla
-# xdg-desktop-portal-hyprland
 # gnome-keyring
