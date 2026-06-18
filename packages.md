@@ -59,12 +59,14 @@ github-cli
 # heroic-games-launcher-bin
 #
 # davinci-resolve (git clone https://aur.archlinux.org/davinci-resolve.git, linux-zip von blackmagic herunterladen und in geklonten ordner kopieren, makepkg -i, fehlendes über yay installieren ! https://mirror.cachyos.org/repo/x86_64/cachyos/ für qt5-webengine und dann "sudo pacman -U qt5-webengine-5.15.19-5.1-x86_64.pkg.tar.zst" im Downloadsordner, makepkg -i wiederholen)
-# 
+#
 
 # Not tryed
 
-## filezilla
-## easyeffects
-## piper
-## openrgb
-## xdg-desktop-portal-hyprland
+# piper/solaar
+# openrgb
+
+# paint.net alternative
+# filezilla
+# easyeffects
+# xdg-desktop-portal-hyprland
