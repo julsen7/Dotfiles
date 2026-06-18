@@ -7,6 +7,7 @@ lib32-vulkan-radeon
 fwupd
 udisks2
 udiskie
+ntfs-3g
 brightnessctl
 ly
 hyprland
