@@ -73,3 +73,8 @@ cd ~/Dotfiles
 chmod +x install.sh
 ./install.sh
 ```
+
+Config github to use correct authentication.
+```bash
+gh auth login
+```
