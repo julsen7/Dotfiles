@@ -15,6 +15,21 @@ sof-firmware
 ufw
 wireplumber
 
+von Hyprland als essentiel genannt:
+dunst
+pipewire
+wireplumber
+xdg-desktop-portal-hyprland
+hyprpolkitagent
+qt5-wayland
+qt6-wayland
+noto-fonts
+ttf-jetbrain-mono-nerd
+---
+
+von mir:
+noto-fonts-emoji
+
 ## Nach Hyprland-Wiki
 
 dunst
