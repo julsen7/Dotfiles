@@ -61,11 +61,16 @@ fi
 
 echo "==> Activating Services..."
 sudo systemctl enable ly@tty1.service
+sudo systemctl enable bluetooth.sevice
+sudo systemctl enable ufw.service
 # sudo systemctl enable NetworkManager
-# systemctl [--user] list-unit-files --state=enabled
 
-systemctl --user enable pipewire
-systemctl --user enable pipewire-pulse
+# systemctl [--user] list-unit-files --state=enabled
+# systemctl [--user] status XXX
+
+systemctl --user enable pipewire.service
+systemctl --user enable pipewire-pulse.service
+# systemctl --user enable wireplumber.service
 systemctl --user enable hyprpolkitagent.service 
 systemctl --user enable waybar.service
 systemctl --user enable hyprpaper.service
