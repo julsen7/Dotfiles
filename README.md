@@ -15,32 +15,16 @@ disk configuration use best afford, ext4 home-no
 authentication rootpw
 user julsen <pw> sudo-yes
 profile minimal
-applications: bluetooth yes, audio pipewire, print no, power management power-profiles daemon, firewall ufw, additional fonts noto-fonts noto-fonts-emoji
-network configuration: network manager
 timezone: Europe/Berlin
 install: yes
 
 automatisch-installiert -Qe:
 amd-ucode
 base
-bluez
-bluez-utils
 efibootmgr
-gst-plugin-pipewire
-libpulse
 linux
 linux-firmware
-networkmanager
-pipewire
-pipewire-alsa
-pipewire-jack
-pipewire-pulse
-power-profiles-daemon
-sof-firmware
 sudo
-ufw
-wireplumber
-wpa_supplicant
 zram-generator
 ```
 
