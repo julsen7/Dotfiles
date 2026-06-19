@@ -30,8 +30,6 @@ wpa_supplicant
 zram-generator
 ```
 
----
-
 ## 2. Dotfiles & Software Deployment
 
 Log in as `julsen` and execute your deployment scripts directly within your personal home directory.
