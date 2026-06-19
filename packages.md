@@ -1,5 +1,19 @@
 # Packages
 
+dunst
+pipewire
+wireplumber
+xdg-desktop-portal-hyprland
+uwsm
+libnewt
+hyprpolkitagent
+qt5-wayland
+qt6-wayland
+noto-fonts
+noto-fonts-emoji
+ttf-jetbrains-mono-nerd
+nwg-look
+
 mesa
 lib32-mesa
 vulkan-radeon
@@ -15,7 +29,6 @@ hyprlauncher
 hyprpaper
 hyprpicker
 hyprshot
-hyprpolkitagent
 waybar
 fastfetch
 starship
@@ -25,7 +38,6 @@ zsh-autosuggestions
 zsh-syntax-highlighting
 python-pywal
 yazi
-ttf-jetbrains-mono-nerd
 bibata-cursor-git
 btop
 bluetui
@@ -44,7 +56,8 @@ eza
 zoxide
 fzf
 github-cli
-xdg-desktop-portal-hyprland
+
+# Nur auf hauptrechner
 
 # steam
 # obs-studio

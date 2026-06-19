@@ -1,0 +1,22 @@
+hl.env("AQ_DRM_DEVICES", "/dev/dri/card0:/dev/dri/card1")
+systemctl --user start hyprpolkitagent
+
+hl.exec_cmd("systemctl --user start hyprpolkitagent")
+hl.exec_cmd("systemctl --user start graphical-session.target")
+
+export XCURSOR_THEME="Bibata-Modern-Ice"
+export XCURSOR_SIZE=24
+hl.exec_cmd("gsettings set org.gnome.desktop.interface cursor-theme 'THEME_NAME'")
+hl.exec_cmd("hyprctl setcursor Bibata-Modern-Ice 24")
+
+export GDK_BACKEND="wayland,x11,*"
+export XDG_CURRENT_DESKTOP="Hyprland"
+export XDG_SESSION_TYPE="wayland"
+export XDG_SESSION_DESKTOP="Hyprland"
+
+export GTK_THEME="Adwaita:dark"
+export GTK2_RC_FILES="/usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc"
+export QT_STYLE_OVERRIDE="Adwaita-Dark"
+export QT_QPA_PLATFORM="wayland;xcb"
+
+systemctl --user enable --now hyprpolkitagent.service

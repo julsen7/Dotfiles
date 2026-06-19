@@ -12,24 +12,15 @@ hl.monitor({
     scale    = "1",
 })
 
-hl.env("HYPRCURSOR_THEME", "Bibata-Modern-Ice")
-hl.env("HYPRCURSOR_SIZE", "24")
-hl.env("XCURSOR_THEME", "Bibata-Modern-Ice")
-hl.env("XCURSOR_SIZE", "24")
-hl.env("GTK_THEME", "Adwaita:dark")
-hl.env("GTK2_RC_FILES", "/usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc")
-hl.env("QT_STYLE_OVERRIDE", "Adwaita-Dark")
-
 hl.on("hyprland.start", function()
     hl.exec_cmd("waybar & hyprpaper")
-    hl.exec_cmd("systemctl --user start hyprpolkitagent")
     hl.exec_cmd("udiskie")
-    hl.exec_cmd("gsettings set org.gnome.desktop.interface cursor-theme 'Bibata-Modern-Ice'")
     hl.exec_cmd("discord --start-minimized")
-    hl.exec_cmd("spotify-launcher")
-end)
+    hl.exec_cmd("spotify-launcher", { workspace = "5 silent" })
 
-hl.window_rule({ match = { class = "^(Spotify)$" }, workspace = "5 silent" })
+    -- fix
+    hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+end)
 
 for i = 1, 3 do
     hl.workspace_rule({ workspace = i, monitor = "HDMI-A-1", default = true, persistent = true })
