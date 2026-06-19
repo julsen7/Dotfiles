@@ -11,8 +11,7 @@ Boot from your Arch Linux live media and complete these initial configuration st
 ```bash
 keyboard layout de-latin1
 locale language de_DE.UTF-8
-disk configuration use best afford (1 efi, 4 swap, rest main)hauptfestplatte ext4 home-no
-bootloader systemd-boot uki enabled
+disk configuration use best afford, ext4 home-no
 authentication rootpw
 user julsen <pw> sudo-yes
 profile minimal
