@@ -12,22 +12,16 @@ hl.monitor({
     scale    = "1",
 })
 
-hl.exec_cmd("systemctl --user start hyprpolkitagent") -- ? user
-hl.exec_cmd("systemctl --user start graphical-session.target")
-
-hl.exec_cmd("gsettings set org.gnome.desktop.interface cursor-theme 'THEME_NAME'")
+hl.exec_cmd("gsettings set org.gnome.desktop.interface cursor-theme 'Bibata-Modern-Ice'")
 hl.exec_cmd("hyprctl setcursor Bibata-Modern-Ice 24")
 
 -- systemctl --user enable --now hyprpolkitagent.service
 
 hl.on("hyprland.start", function()
-    hl.exec_cmd("waybar & hyprpaper")
-    hl.exec_cmd("udiskie")
-    hl.exec_cmd("discord --start-minimized")
-    hl.exec_cmd("spotify-launcher", { workspace = "5 silent" })
+    hl.exec_cmd("uwsm app -- discord --start-minimized")
+    hl.exec_cmd("uwsm app -- udiskie")
 
-    -- fix
-    hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+    hl.exec_cmd("uwsm app -- spotify-launcher", { workspace = "5 silent" })
 end)
 
 for i = 1, 3 do

@@ -62,9 +62,12 @@ fi
 echo "==> Activating Services..."
 sudo systemctl enable NetworkManager
 sudo systemctl enable ly@tty1.service
-systemctl --user enable hyprpolkitagent
+
 systemctl --user enable pipewire
 systemctl --user enable pipewire-pulse
+systemctl --user enable hyprpolkitagent.service 
+systemctl --user enable waybar.service
+systemctl --user enable hyprpaper.service
 
 echo "==> Activating waybar scripts"
 if [ -d "$DOTFILES_DIR/.config/waybar" ]; then
