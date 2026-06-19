@@ -100,10 +100,11 @@ visual-studio-code-bin
 
 # steam
 # obs-studio
+# open-studio-plugin-browser (--asdeps)
 # modrinth-app
 # heroic-games-launcher-bin
 # piper
-# easyeffects
+# easyeffects qt6-multimedia-ffmpeg wählen
 # davinci-resolve (git clone <https://aur.archlinux.org/davinci-resolve.git>, linux-zip von blackmagic herunterladen und in geklonten ordner kopieren, makepkg -i, fehlendes über yay installieren ! <https://mirror.cachyos.org/repo/x86_64/cachyos/> für qt5-webengine und dann "sudo pacman -U qt5-webengine-5.15.19-5.1-x86_64.pkg.tar.zst" im Downloadsordner, makepkg -i wiederholen)
 
 ### To Try
