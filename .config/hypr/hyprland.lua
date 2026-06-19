@@ -2,22 +2,30 @@ hl.monitor({
     output   = "HDMI-A-1",
     mode     = "2560x1440@144",
     position = "0x0",
-    scale    = "1",
+    scale    = 1,
 })
 
 hl.monitor({
     output   = "eDP-1",
     mode     = "1920x1080@60",
     position = "2560x500",
-    scale    = "1",
+    scale    = 1,
 })
 
-hl.exec_cmd("gsettings set org.gnome.desktop.interface cursor-theme 'Bibata-Modern-Ice'")
+hl.monitor({
+    output = "",
+    mode = "preferred",
+    position = "auto",
+    scale = 1,
+    mirror = "DP-1"
+})
+
 hl.exec_cmd("hyprctl setcursor Bibata-Modern-Ice 24")
+hl.exec_cmd("gsettings set org.gnome.desktop.interface cursor-theme 'Bibata-Modern-Ice'")
 
 hl.on("hyprland.start", function()
     hl.exec_cmd("uwsm app -- udiskie")
-    
+
     hl.exec_cmd("uwsm app -- discord --start-minimized")
     hl.exec_cmd("uwsm app -- spotify-launcher", { workspace = "5 silent" })
 end)

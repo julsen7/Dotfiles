@@ -1,18 +1,2 @@
-HYPRCURSOR_THEME=Bibata-Modern-Ice
-HYPRCURSOR_SIZE=24
-
-XCURSOR_THEME=Bibata-Modern-Ice
-XCURSOR_SIZE=24
-
-AQ_DRM_DEVICES=/dev/dri/card0:/dev/dri/card1
-
-GDK_BACKEND=wayland,x11,*
-QT_QPA_PLATFORM=wayland;xcb
-
-XDG_CURRENT_DESKTOP=Hyprland
-XDG_SESSION_TYPE=wayland
-XDG_SESSION_DESKTOP=Hyprland
-
-GTK_THEME=Adwaita:dark
-GTK2_RC_FILES=/usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc
-QT_STYLE_OVERRIDE=Adwaita-Dark
+export HYPRCURSOR_THEME=Bibata-Modern-Ice
+export HYPRCURSOR_SIZE=24
