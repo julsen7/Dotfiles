@@ -60,8 +60,9 @@ else
 fi
 
 echo "==> Activating Services..."
-sudo systemctl enable NetworkManager
 sudo systemctl enable ly@tty1.service
+# sudo systemctl enable NetworkManager
+# systemctl [--user] list-unit-files --state=enabled
 
 systemctl --user enable pipewire
 systemctl --user enable pipewire-pulse
