@@ -17,15 +17,19 @@ hl.monitor({
     mode = "preferred",
     position = "auto",
     scale = 1,
-    mirror = "DP-1"
+    mirror = "eDP-1"
 })
 
--- hl.exec_cmd("hyprctl setcursor Bibata-Modern-Ice 24")
--- hl.exec_cmd("gsettings set org.gnome.desktop.interface cursor-theme 'Bibata-Modern-Ice'")
 
 hl.on("hyprland.start", function()
+    -- GTK 4
+    hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'")
+    
+    -- Cursor
+    hl.exec_cmd("gsettings set org.gnome.desktop.interface cursor-theme 'Bibata-Modern-Ice'")
+    
     hl.exec_cmd("uwsm app -- udiskie")
-
+    
     hl.exec_cmd("uwsm app -- discord --start-minimized")
     hl.exec_cmd("uwsm app -- spotify-launcher", { workspace = "5 silent" })
 end)
