@@ -18,10 +18,14 @@ lib32-vulkan-radeon
 
 dunst
 pipewire
-gst-plugin-pipewire
 pipewire-alsa
+pipewire-jack
+pipewire-pulse
+gst-plugin-pipewire
 sof-firmware
 wireplumber
+xdg-desktop-portal
+xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 hyprpolkitagent
 gnome-keyring
