@@ -17,17 +17,6 @@ user julsen <pw> sudo-yes
 profile minimal
 Network configuration: Networkmanager
 Timezone: Europe/Berlin
-
-automatisch-installiert -Qe:
-amd-ucode
-base
-efibootmgr
-linux
-linux-firmware
-networkmanager
-sudo
-wpa_supplicant
-zram-generator
 ```
 
 ## 2. Dotfiles & Software Deployment
