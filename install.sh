@@ -60,20 +60,21 @@ else
 fi
 
 echo "==> Activating Services..."
+sudo systemctl enable NetworkManager.service
 sudo systemctl enable ly@tty1.service
 sudo systemctl enable bluetooth.service
 sudo systemctl enable ufw.service
-# sudo systemctl enable NetworkManager
 
+# Commands to check status
 # systemctl [--user] list-unit-files --state=enabled
 # systemctl [--user] status XXX
 
 systemctl --user enable pipewire.service
 systemctl --user enable pipewire-pulse.service
+systemctl --user enable wireplumber.service
 systemctl --user enable hyprpolkitagent.service 
 systemctl --user enable waybar.service
 systemctl --user enable hyprpaper.service
-# systemctl --user enable wireplumber.service
 
 echo "==> Activating waybar scripts"
 if [ -d "$DOTFILES_DIR/.config/waybar" ]; then

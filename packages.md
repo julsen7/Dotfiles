@@ -1,9 +1,6 @@
 # Packages
 
-yay und multilib
-
-
-## Basis (von Archinstall)
+## Base (already from archinstall)
 
 amd-ucode
 base
@@ -45,7 +42,7 @@ udiskie
 qt5-wayland
 qt6-wayland
 
-## Treiber
+## Drivers
 
 mesa
 lib32-mesa
@@ -68,7 +65,7 @@ hyprpicker
 python-pywal
 wl-clipboard
 hyprshot
-waybar pipewire-jack auswählen
+waybar
 kitty
 yazi
 stow
@@ -96,7 +93,7 @@ eza
 zoxide
 fzf
 
-## Andere
+## Other
 
 git
 openssh
@@ -123,7 +120,7 @@ visual-studio-code-bin
 # easyeffects qt6-multimedia-ffmpeg wählen
 # davinci-resolve (git clone <https://aur.archlinux.org/davinci-resolve.git>, linux-zip von blackmagic herunterladen und in geklonten ordner kopieren, makepkg -i, fehlendes über yay installieren ! <https://mirror.cachyos.org/repo/x86_64/cachyos/> für qt5-webengine und dann "sudo pacman -U qt5-webengine-5.15.19-5.1-x86_64.pkg.tar.zst" im Downloadsordner, makepkg -i wiederholen)
 
-### To Try
+## To Try
 
 # openrgb
 # cliphist
