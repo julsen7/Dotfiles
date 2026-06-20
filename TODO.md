@@ -1,19 +1,17 @@
-# TODO
-
-## Feautures
+# Feautures
 
 - waybar: updates, timer colors, disk größe
 - bluetooth-tethering https://wiki.hypr.land/Useful-Utilities/Phone-connect/
 - hyprlauncher austauschen (vlt. rofi, wofi)
-- Dotfiles: obs-config, mdorintht-app, vscode, chromium, github cli?
+- Dotfiles: obs-config, mdorintht-app, wiremix/pipewire/wireplumber, vscode, chromium, github cli?
 
-## Bugs
+# Bugs
 
 - vscode settings & extensions inside .config
 - "didum"-headset-sound alle paar minuten fixen
 - obs: game capture, autostart von screen picker
 - pywal install-script not working
 
-## Other
+# Other
 
 - designs: https://www.youtube.com/watch?v=xfYoN0VL9mY
