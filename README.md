@@ -1,12 +1,6 @@
-# Arch Linux Installation & Post-Setup Guide
+# 1. Base Installation (Arch ISO)
 
-This guide covers the manual base installation of Arch Linux and the automated deployment of system configuration files using GNU Stow.
-
----
-
-## 1. Base Installation (Arch ISO)
-
-Boot from your Arch Linux live media and complete these initial configuration steps an donly change these.
+Boot from your Arch Linux live media with archinstall and complete these initial configuration changes.
 
 ```bash
 keyboard layout de-latin1
@@ -19,12 +13,12 @@ Network configuration: Networkmanager
 Timezone: Europe/Berlin
 ```
 
-## 2. Dotfiles & Software Deployment
+# 2. Dotfiles
 
-Log in as `julsen` and execute your deployment scripts directly within your personal home directory.
+Log in as your user.
 
 ```bash
-sudo pacman -S --needed git base-devel stow
+sudo pacman -S --needed git base-devel
 git clone https://github.com/julsen7/Dotfiles
 cd ~/Dotfiles
 chmod +x install.sh
