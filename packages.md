@@ -14,11 +14,17 @@ lib32-vulkan-radeon
 # lib32-opencl-nvidia
 # nvidia-prime
 
-## Basis
+## Basis (von Archinstall)
 
-
-base-devel
-stow
+amd-ucode
+base
+efibootmgr
+linux
+linux-firmware
+networkmanager
+sudo
+wpa_supplicant
+zram-generator
 
 ## System
 
@@ -49,6 +55,8 @@ power-profiles-daemon
 bluez
 bluez-utils
 nano
+base-devel
+stow
 
 ## Oberfläche
 
