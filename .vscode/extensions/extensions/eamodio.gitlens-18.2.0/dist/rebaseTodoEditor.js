@@ -1,3 +1,0 @@
-(()=>{let e=require("node:fs"),t=require("node:process"),r=t.argv[2];null==r&&(0,t.exit)(1);try{var i,l;let s,p,n=(t.env.GL_SQUASH_SHAS??"").split(",").filter(Boolean),a=t.env.GL_SQUASH_ACTION;0===n.length&&(0,t.exit)(1),(0,e.writeFileSync)(r,(i=(0,e.readFileSync)(r,"utf8"),l="fixup"===a||"drop"===a||"reword"===a?a:"squash",s="squash"===l||"fixup"===l,p=!1,i.split(`
-`).map(e=>{let t=/^(?:pick|p)\s+([0-9a-f]+)\b/.exec(e);return null!=t&&n.some(e=>e.startsWith(t[1]))?s&&!p?(p=!0,e):e.replace(/^(?:pick|p)(\s)/,`${l}$1`):e}).join(`
-`))),(0,t.exit)(0)}catch{(0,t.exit)(1)}module.exports={}})();

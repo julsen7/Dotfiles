@@ -4,7 +4,6 @@
 
 # Ignore .git folder and .gitignore
 \.git
-\.gitignore
 
 # Ignore all Markdown and ini files
 ^.*\.md$
