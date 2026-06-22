@@ -48,11 +48,11 @@ mesa
 lib32-mesa
 vulkan-radeon
 lib32-vulkan-radeon
-# nvidia-open
-# lib32-nvidia-utils
-# opencl-nvidia
-# lib32-opencl-nvidia
-# nvidia-prime
+nvidia-open
+lib32-nvidia-utils
+opencl-nvidia
+lib32-opencl-nvidia
+nvidia-prime
 
 ## Oberfläche
 
@@ -78,7 +78,7 @@ bluetui
 wiremix
 nmtui-go
 radeontop
-# nvtop
+nvtop
 
 ## Design
 
@@ -110,10 +110,10 @@ discord
 spotify-launcher
 texlive-basic
 visual-studio-code-bin
-# modrinth-app
-# steam
-# heroic-games-launcher-bin
-# piper
+modrinth-app
+steam
+heroic-games-launcher-bin
+piper
 # easyeffects qt6-multimedia-ffmpeg wählen
 # obs-studio-browser (mit xwayland-flag starten)
 
