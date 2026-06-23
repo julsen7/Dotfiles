@@ -132,10 +132,8 @@ piper
 
 ## To Try
 
+# blender
+# gimp
+# mariadb
 # openrgb
-# cliphist https://wiki.archlinux.org/title/Clipboard
-# pinta/gimp
 # filezilla
-# maria-db
-# helvum
-# pulsemixer
