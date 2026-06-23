@@ -94,6 +94,7 @@ bibata-cursor-git
 eza
 zoxide
 fzf
+spicetify-cli
 
 ## Other
 
