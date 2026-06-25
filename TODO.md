@@ -12,7 +12,6 @@
 
 # Features
 
-- waybar design tooltip
 - modrinth ~/Minecraft/mein_modpack.mrpack
 - theme-selector
 - wallpaper-selector
