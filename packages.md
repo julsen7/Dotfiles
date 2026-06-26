@@ -60,9 +60,9 @@ uwsm
 ly
 hyprland
 rofi
-hyprpaper
+awww
 hyprpicker
-python-pywal
+matugen
 wl-clipboard
 hyprshot
 waybar
@@ -70,6 +70,12 @@ kitty
 yazi
 stow
 man-db
+kdeconnect
+hypr-kdeconnect-fix-git
+android-tools
+gvfs-mtp
+scrcpy
+hyprlock
 
 ## TUI
 
@@ -115,14 +121,14 @@ modrinth-app
 steam
 heroic-games-launcher-bin
 piper
-# easyeffects qt6-multimedia-ffmpeg wählen
-# obs-studio
-# --asdeps obs-studio-plugin-browser
-# obs-vkcapture
-# lib32-obs-vkcapture
-# obs-pipewire-audio-capture
-# blender
-# gimp
+easyeffects
+obs-studio
+obs-studio-plugin-browser
+obs-vkcapture
+lib32-obs-vkcapture
+obs-pipewire-audio-capture
+blender
+gimp
 
 # davinci-resolve
 # git clone https://aur.archlinux.org/davinci-resolve.git
@@ -138,10 +144,4 @@ piper
 # openrgb
 # filezilla
 # nvim
-# kdeconnect
-# hypr-kdeconnect-fix-git
-# android-tools
-# gvfs-mtp
-# scrcpy
 # localsend
-# hyprlock

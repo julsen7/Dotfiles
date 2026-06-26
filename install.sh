@@ -90,16 +90,16 @@ fi
 cd "$DOTFILES_DIR"
 
 echo "==> Generating Wallpaper-Theme ..."
-
 WALLPAPER_PATH=$(find "$DOTFILES_DIR/wallpapers" -type f \( -name "*.webp" -o -name "*.jpg" -o -name "*.png" \) -print -quit 2>/dev/null)
 
-if [ -n "$WALLPAPER_SRC" ] && [ -f "$WALLPAPER_SRC" ]; then
+if [ -n "$WALLPAPER_PATH" ] && [ -f "$WALLPAPER_PATH" ]; then
     mkdir -p "$TARGET_WALLPAPER_DIR"
 
-    cp "$WALLPAPER_SRC" "$TARGET_WALLPAPER_DIR/Mountain.webp"
     cp "$DOTFILES_DIR"/wallpapers/* "$TARGET_WALLPAPER_DIR/" 2>/dev/null || true
+    
+    cp "$WALLPAPER_PATH" "$TARGET_WALLPAPER_DIR/Mountain.webp"
 
-    wal -i "$WALLPAPER_PATH"
+    matugen image "$TARGET_WALLPAPER_DIR/Mountain.webp" -m "dark"
 else
     echo "Warning: No wallpaper found in $DOTFILES_DIR/wallpapers/"
 fi

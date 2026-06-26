@@ -28,6 +28,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("uwsm app -- wl-paste --type image --watch cliphist store")
     hl.exec_cmd("uwsm app -- udiskie")
     hl.exec_cmd("uwsm app -- snappy-switcher --daemon")
+    hl.exec_cmd("uwsm app -- awww-daemon")
     
     hl.exec_cmd("uwsm app -- discord", { workspace = "5 silent" })
     hl.exec_cmd("uwsm app -- spotify", { workspace = "6 silent" })

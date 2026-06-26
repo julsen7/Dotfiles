@@ -1,10 +1,10 @@
-@import url("../../.cache/wal/colors-waybar.css");
+@import "colors.css";
 
 * {
   font-family: "JetBrainsMono Nerd Font Propo";
   font-size: 16px;
   border-radius: 20px;
-  color: @foreground;
+  color: @on_surface;
 }
 
 #waybar {
@@ -21,22 +21,22 @@
 #bluetooth,
 #network,
 #battery {
-  background-color: @background;
+  background-color: @surface;
   margin: 4px;
   padding: 2px 12px;
 }
 
 #tray menu {
-  background-color: @background;
+  background-color: @surface;
   padding: 4px;
 }
 
 #tray menu menuitem:hover {
-  background-color: @color7;
+  background-color: @primary_container;
 }
 
 #tray menu menuitem:hover label {
-  color: @background;
+  color: @on_primary_container;
 }
 
 #workspaces button {
@@ -46,11 +46,11 @@
 }
 
 #workspaces button.active {
-  background-color: @color7;
+  background-color: @primary;
 }
 
 #workspaces button.active label {
-  color: @background;
+  color: @on_primary;
 }
 
 #workspaces button:hover {
@@ -69,20 +69,21 @@
 #pulseaudio-slider trough {
   min-height: 10px;
   min-width: 80px;
+  background-color: @surface_container_high;
 }
 
 #pulseaudio-slider highlight {
-  background-color: @color4;
+  background-color: @primary;
 }
 
 #battery.charging {
-  color: #50fa7b;
+  color: @tertiary;
 }
 
 #battery.warning {
-  color: #f1fa8c;
+  color: @error_container;
 }
 
 #battery.critical {
-  color: #ff5555;
+  color: @error;
 }
