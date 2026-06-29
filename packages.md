@@ -131,6 +131,7 @@ lib32-obs-vkcapture
 obs-pipewire-audio-capture
 blender
 gimp
+krita
 
 # davinci-resolve
 # git clone https://aur.archlinux.org/davinci-resolve.git
@@ -147,3 +148,4 @@ gimp
 # filezilla
 # nvim
 # localsend
+# audacity

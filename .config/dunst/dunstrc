@@ -1,0 +1,38 @@
+# default config: /etc/dunst/dunstrc
+
+[global]
+    monitor = 0
+    enable_posix_regex = true
+    width = 400
+    height = (0, 300)
+    offset = (4, 10)
+    frame_width = 0
+    gap_size = 5
+    font = JetBrainsMono Nerd Font Propo 10
+    dmenu = /usr/bin/rofi -dmenu -p dunst:
+    corner_radius = 20
+    icon_path = "/usr/share/icons/Adwaita/16x16/devices/"
+    icon_theme = "Adwaita, breeze"
+    enable_recursive_icon_lookup = true
+    min_icon_size = 32
+    max_icon_size = 64
+    fullscreen = suppress
+
+[urgency_low]
+    background = "#222222"
+    foreground = "#888888"
+
+[urgency_normal]
+    background = "#000000"
+    foreground = "#ffffff"
+    override_pause_level = 30
+
+[urgency_critical]
+    background = "#c40000"
+    foreground = "#ffffff"
+    timeout = 0
+    override_pause_level = 60
+
+[fullscreen_critical]
+    msg_urgency = critical
+    fullscreen = show

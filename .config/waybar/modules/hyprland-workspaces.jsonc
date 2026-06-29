@@ -4,7 +4,7 @@
         "window-rewrite-default": "",
         "window-rewrite": {
             "class<kitty>": "",
-            "class<zen>": "󰖟",
+            "class<zen>": "",
             "title<.*youtube.*>": "",
             "class<code>": "󰨞",
             "class<spotify>": "",

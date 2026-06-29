@@ -32,6 +32,7 @@ num-filtered-rows {
 entry {
     placeholder: "Search";
     text-color: white;
+    background-color: gray;
     padding: 10px 50px;
 }
 

@@ -6,6 +6,7 @@ alias lt='eza --tree --level=2 --icons'
 alias la='eza -a --icons'
 alias lla='eza -lha --icons --group-directories-first'
 alias cd='z'
+alias cl='clear'
 
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
