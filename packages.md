@@ -40,6 +40,7 @@ brightnessctl
 udisks2
 udiskie
 ntfs-3g
+libappindicator-gtk3
 qt5-wayland
 qt6-wayland
 
