@@ -79,11 +79,10 @@ systemctl --user enable pipewire-pulse.service
 systemctl --user enable wireplumber.service
 systemctl --user enable hyprpolkitagent.service 
 systemctl --user enable waybar.service
-systemctl --user enable hyprpaper.service
 
 echo "==> Activating waybar scripts ..."
-if [ -d "$DOTFILES_DIR/.config/waybar" ]; then
-    cd "$DOTFILES_DIR/.config/waybar"
+if [ -d "$DOTFILES_DIR/.config/waybar/scripts" ]; then
+    cd "$DOTFILES_DIR/.config/waybar/scripts"
     chmod +x weather.sh 2>/dev/null || echo "Warning: Some scripts are missing!"
 fi
 
