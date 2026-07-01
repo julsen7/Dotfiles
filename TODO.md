@@ -2,7 +2,7 @@
 
 ## Dotfiles
 
-- vscode theming black, settings and other folder-picker
+- vscode folder-picker
 - zen-browser (spaces, colors und routes)
 
 ## Features
@@ -11,9 +11,12 @@
 - waybar pipewire-slider left corner & tray colors in subsettings
 - waybar workspaces auf youtube und twitch und gthub filtern
 
-- hypr animationen (spur z.b. feuerfarben beim reinsliden)
-
+- hyprland animationen (spur z.b. feuerfarben beim reinsliden)
 - hyprland snapping with super + key
+
+- fastfetch package amount
+
+- ly background and design
 
 - btop theme
 - bluetooth-tethering
@@ -32,4 +35,4 @@
 
 - designs: <https://www.youtube.com/watch?v=xfYoN0VL9mY>
 - QuickShell
-- docker lernen
+- Docker lernen
