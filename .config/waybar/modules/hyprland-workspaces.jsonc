@@ -1,15 +1,34 @@
 {
     "hyprland/workspaces": {
         "format": "{windows}",
+        "on-click": "hyprctl dispatch hl.dsp.focus({ workspace = {icon} })",
         "window-rewrite-default": "",
         "window-rewrite": {
             "class<kitty>": "",
             "class<zen>": "",
-            "title<.*youtube.*>": "",
             "class<code>": "󰨞",
-            "class<spotify>": "",
+            "class<spotify>": "󰓇",
             "class<discord>": "",
-            "class<obs>": "󱜠"
+            "class<obs>": "󱜠",
+            "class<blender>": "󰂫",
+            "class<steam>": "󰓓",
+            "class<krita>": "",
+            "class<gimp>": "",
+            "title<.*minecraft.*>": "󰍳",
+            "class<zen> title<.*youtube.*>": "",
+            "class<zen> title<.*twitch.*>": "󰕃",
+            "class<zen> title<.*gmail.*>": "󰊫",
+            "class<zen> title<.*moodle.*>": ""
         }
+        // "format": "{icon}",
+        // "format-icons": {
+        //     "1": "",
+        //     "2": "",
+        //     "3": "",
+        //     "4": "",
+        //     "5": "",
+        //     "active": "",
+        //     "default": ""
+        // },
     }
 }

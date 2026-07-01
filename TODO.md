@@ -1,12 +1,8 @@
 # TODO
 
-## Dotfiles
-
-- zen-browser (spaces, colors und routes)
-
 ## Features
 
-- waybar click auf workspaces erlauben, margin gleich wie hyprland
+- waybar click auf workspaces erlauben
 - waybar pipewire-slider left corner & tray colors in subsettings
 - waybar workspaces auf youtube und twitch und gthub filtern
 
