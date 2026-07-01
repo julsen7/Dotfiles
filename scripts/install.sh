@@ -109,6 +109,7 @@ fi
 
 echo "${GREEN}==>${NC} Setting Wallpaper..."
 if [ -f "$WALLPAPER_DIR/Mountain.jpg" ]; then
+    cp "$WALLPAPER_DIR/Mountain.jpg" "$DOTFILES_DIR/.config/hypr/current.wall"
     matugen image "$WALLPAPER_DIR/Mountain.jpg" --source-color-index 0
 else
     echo "${YELLOW}Warning:${NC} Mountain.webp not found. Theme could not be generated."
