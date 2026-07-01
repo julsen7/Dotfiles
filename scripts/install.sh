@@ -66,7 +66,7 @@ if [ -f /etc/ly/config.ini ]; then
     sudo mkdir -p /etc/ly/
     sudo sed -i 's/^#\?\s*animation\s*=.*/animation = matrix/' /etc/ly/config.ini
 else
-    echo "Warning: /etc/ly/config.ini not found."
+    echo "${YELLOW}Warning:${NC} /etc/ly/config.ini not found."
 fi
 
 # Commands to check status
@@ -86,31 +86,13 @@ systemctl --user enable hyprpolkitagent.service
 systemctl --user enable waybar.service
 
 echo "${GREEN}==>${NC} Activating scripts..."
-if [ -d "$HOME/.config/waybar/scripts" ]; then
-    cd "$HOME/.config/waybar/scripts"
-    chmod +x weather.sh 2>/dev/null
-fi
+chmod +x "$DOTFILES_DIR/.config/waybar/weather.sh" 2>/dev/null
 sudo chmod a+wr /opt/spotify
 sudo chmod a+wr /opt/spotify/Apps -R
 
-cd "$DOTFILES_DIR"
+echo "${GREEN}==>${NC} Setting Wallpaper..."
+matugen image "$WALLPAPER_DIR/Mountain.jpg" --source-color-index 0 >/dev/null 2>&1
 
-echo "${GREEN}==>${NC} Generating Wallpaper-Theme ..."
-WALLPAPER_PATH=$(find "$DOTFILES_DIR/wallpapers" -type f \( -name "*.webp" -o -name "*.jpg" -o -name "*.png" \) -print -quit 2>/dev/null)
-
-if [ -n "$WALLPAPER_PATH" ] && [ -f "$WALLPAPER_PATH" ]; then
-    mkdir -p "$WALLPAPER_DIR"
-
-    cp "$DOTFILES_DIR"/wallpapers/* "$WALLPAPER_DIR/" 2>/dev/null || true
-    
-    cp "$WALLPAPER_PATH" "$WALLPAPER_DIR/Mountain.webp"
-
-    matugen image "$WALLPAPER_DIR/Mountain.jpg" -m "dark"
-else
-    echo "Warning: No wallpaper found in $DOTFILES_DIR/wallpapers/"
-fi
-
-
-echo "===================================== "
-echo " Installation finished! Please reboot."
-echo "======================================"
+echo "========================================"
+echo "  Installation finished! Please reboot  "
+echo "========================================"
