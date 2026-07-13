@@ -129,6 +129,8 @@ prismlauncher
 steam
 heroic-games-launcher-bin
 easyeffects
+lsp-plugins
+calf
 obs-studio
 obs-studio-plugin-browser
 obs-vkcapture
@@ -138,6 +140,7 @@ blender
 gimp
 krita
 obsidian
+audacoty
 audacity4-bin
 
 # qemu-full

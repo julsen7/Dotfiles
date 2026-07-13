@@ -1,0 +1,15 @@
+[StreamInputs]
+inputDevice=alsa_input.usb-Logitech_Yeti_GX_2432SGM03DK8-00.mono-fallback
+plugins=gate#0,deesser#0,equalizer#0,compressor#0,limiter#0
+visiblePage=pluginsPage
+visiblePlugin=gate#0
+
+[StreamOutputs]
+outputDevice=alsa_output.usb-Logitech_G_series_G435_Wireless_Gaming_Headset_202105190004-00.analog-stereo
+visiblePage=pluginsPage
+
+[Window]
+height=1004
+visiblePage=inputPage
+visiblePresetSheetPage=autoloadingPage
+width=1900
