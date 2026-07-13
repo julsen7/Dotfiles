@@ -6,7 +6,7 @@
 - theming (cursor, qt, gtk(-ordner))
 
 - Wallpapers: <https://www.wallpaperflare.com/>
-- HomeManager
-- Docker
-- QuickShell
 - NixOS
+- HomeManager
+- QuickShell (waybar, dunst, rofi, snappy-switcher)
+- Docker
