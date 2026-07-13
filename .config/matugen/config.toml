@@ -1,0 +1,41 @@
+[config]
+
+[config.wallpaper]
+set = true
+command = "awww img {{ image }} --transition-type center"
+
+[templates.dunst]
+input_path = '~/Dotfiles/.config/matugen/templates/dunstrc-colors'
+output_path = '~/Dotfiles/.config/dunst/themes/colorful'
+post_hook = 'dunstctl reload'
+
+[templates.hyprland]
+input_path = '~/Dotfiles/.config/matugen/templates/hyprland-colors.lua'
+output_path = '~/Dotfiles/.config/hypr/themes/colorful.lua'
+
+[templates.hyprlock]
+input_path = '~/Dotfiles/.config/matugen/templates/hyprland-colors.conf'
+output_path = '~/Dotfiles/.config/hypr/themes/colorful.conf'
+
+[templates.kitty]
+input_path = '~/Dotfiles/.config/matugen/templates/kitty-colors.conf'
+output_path = '~/Dotfiles/.config/kitty/themes/colorful.conf'
+post_hook = "killall -SIGUSR1 kitty 2>/dev/null || true"
+
+[templates.obs]
+input_path = '~/Dotfiles/.config/matugen/templates/matugen.obt'
+output_path = '~/Dotfiles/.config/obs-studio/themes/colorful.obt'
+
+[templates.rofi]
+input_path = '~/Dotfiles/.config/matugen/templates/rofi-colors.rasi'
+output_path = '~/Dotfiles/.config/rofi/themes/colorful.rasi'
+
+[templates.spotify]
+input_path = '~/Dotfiles/.config/matugen/templates/spicetify.ini'
+output_path = '~/Dotfiles/.config/spicetify/Themes/Theme/colorful.ini'
+post_hook = 'spicetify watch -s 2>&1 | sed "/Reloaded Spotify/q"'
+
+[templates.waybar]
+input_path = '~/Dotfiles/.config/matugen/templates/colors.css'
+output_path = '~/Dotfiles/.config/waybar/themes/colorful.css'
+post_hook = "pkill -SIGUSR2 waybar"

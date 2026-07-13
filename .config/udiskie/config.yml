@@ -1,0 +1,4 @@
+program_options:
+  tray: auto
+  file_manager: uwsm app -- kitty -e yazi
+  terminal: uwsm app -- kitty

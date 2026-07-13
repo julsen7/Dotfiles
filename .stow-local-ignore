@@ -1,0 +1,11 @@
+# Folders
+^/assets
+^/Minecraft
+^/scripts
+^/wallpaper
+\.git
+
+# Markdown
+^packages.*
+^README.*
+^TODO.*

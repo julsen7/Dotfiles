@@ -1,0 +1,5 @@
+* {
+    surface: #000000;
+    on-surface: #ffffff;
+    surface-container: #313131;
+}

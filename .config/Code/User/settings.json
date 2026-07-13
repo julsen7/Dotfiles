@@ -1,0 +1,28 @@
+{
+    "explorer.confirmDelete": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "explorer.confirmDragAndDrop": false,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "editor.fontFamily": "'JetBrainsMono Nerd Font Propo', 'Droid Sans Mono', monospace",
+    "explorer.confirmPasteNative": false,
+    "latex-workshop.latex.autoBuild.run": "onFileChange",
+    "files.autoSave": "afterDelay",
+    "workbench.startupEditor": "none",
+    "files.exclude": {
+        "**/.git": false
+    },
+    "latex-workshop.formatting.latex": "tex-fmt",
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "workbench.colorTheme": "GitHub Dark Default",
+    "Lua.workspace.library": [
+        "/usr/share/hypr/stubs"
+    ],
+    "files.simpleDialog.enable": true
+}

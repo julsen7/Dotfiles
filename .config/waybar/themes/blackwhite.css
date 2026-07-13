@@ -1,0 +1,7 @@
+@define-color surface #000000;
+@define-color on_surface #ffffff;
+@define-color surface_container #313131;
+@define-color primary #ffffff;
+@define-color on_primary #000000;
+@define-color inverse_surface #adff2f;
+@define-color error #ff0000;

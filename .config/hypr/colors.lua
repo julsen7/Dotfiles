@@ -1,0 +1,1 @@
+/home/julsen/Dotfiles/.config/hypr/themes/colorful.lua

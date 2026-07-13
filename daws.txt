@@ -1,0 +1,36 @@
+-- EDITOR
+audacity
+ocenaudio
+
+-- DAWS
+ableton live
+fl studio
+reason
+pro tools
+studio one
+cubase
+traktion waveform free
+cxan cadur
+lmms
+logic pro
+garageband
+mixcraft
+reaper cockos
+LUNA
+cakewalk by bandlab
+cakewalk next
+cakewalk sonar
+spotifys soundtrap
+
+! wikipedia: liste daws
+
+-- Instr/Effects
+spitfire audio labs
+tux guitar
+power drum kit 2
+komplete start
+mfreefxbundle
+kilohearts essentials
+voxengo SPAN
+youlean loudness meter
+asio4all

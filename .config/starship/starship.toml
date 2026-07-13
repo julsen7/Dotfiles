@@ -1,0 +1,85 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$os\
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$all\
+$cmd_duration\
+$time\
+$line_break\
+$character
+"""
+
+add_newline = true
+
+[os]
+format = '[$symbol]($style) '
+disabled = false
+symbols = { Arch = '󰣇' }
+
+[directory]
+format = '[󰉋 $path]($style)[$read_only]($read_only_style) '
+truncate_to_repo = false
+
+[directory.substitutions]
+'Documents' = '󰈙 Documents'
+'Downloads' = ' Downloads'
+'Music' = ' Music'
+'Pictures' = ' Pictures'
+
+[git_branch]
+format = '[$symbol$branch]($style) '
+symbol = ' '
+
+[fill]
+symbol = '·'
+style = 'white'
+
+[maven]
+format = ' [${symbol} (${version})]($style) '
+symbol = ''
+style ='#c31e3d'
+
+[gradle]
+format = ' [${symbol} (${version})]($style) '
+symbol = ''
+style = '#02303a'
+
+[java]
+format = ' [${symbol} (${version})]($style) '
+symbol = '󰬷'
+style = '#ed8b00'
+
+[c]
+format = ' [${symbol} (${version})]($style) '
+symbol = '󰙱'
+style = '#3848a9'
+
+[cpp]
+format = ' [${symbol} (${version})]($style) '
+symbol = '󰙲'
+style = '#00599c'
+
+[haskell]
+format = ' [${symbol} (${version})]($style) '
+symbol = '󰲒'
+style = '#5e5086'
+
+[kotlin]
+format = ' [${symbol} (${version})]($style) '
+symbol = '󱈙'
+
+[python]
+format = ' [${symbol} (${version})]($style) '
+symbol = '󰌠'
+style = '#ffd43b'
+
+[cmd_duration]
+format = ' 󱦟 [$duration]($style) '
+
+[time]
+disabled = false
+format = '  [$time]($style) '

@@ -1,0 +1,116 @@
+{
+    "logo": {
+        "type": "none"
+    },
+    "display": {
+        "separator": " "
+    },
+    "modules": [
+        {
+            "type": "custom",
+            "key": " "
+        },
+        {
+            "type": "custom",
+            "key": "    ___              __  "
+        },
+        {
+            "type": "custom",
+            "key": "   /   |  __________/ /_ "
+        },
+        {
+            "type": "custom",
+            "key": "  / /| | / ___/ ___/ __ \\"
+        },
+        {
+            "type": "custom",
+            "key": " / ___ |/ /  / /__/ / / /"
+        },
+        {
+            "type": "custom",
+            "key": "/_/  |_/_/   \\___/_/ /_/ "
+        },
+        {
+            "type": "custom",
+            "key": " "
+        },
+        {
+            "type": "custom",
+            "key": "╭────────────╮"
+        },
+        {
+            "type": "title",
+            "key": "│ {#34}  user    {#keys}│",
+            "format": "{user-name}"
+        },
+        {
+            "type": "title",
+            "key": "│ {#34}󰇅  hname   {#keys}│",
+            "format": "{host-name}"
+        },
+        {
+            "type": "uptime",
+            "key": "│ {#34}󰅐  uptime  {#keys}│"
+        },
+        {
+            "type": "os",
+            "key": "│ {#34}{icon}  distro  {#keys}│"
+        },
+        {
+            "type": "kernel",
+            "key": "│ {#34}  kernel  {#keys}│"
+        },
+        {
+            "type": "wm",
+            "key": "│ {#34}  wm      {#keys}│"
+        },
+        {
+            "type": "de",
+            "key": "│ {#34}󰇄  desktop {#keys}│"
+        },
+        {
+            "type": "terminal",
+            "key": "│ {#34}  term    {#keys}│"
+        },
+        {
+            "type": "shell",
+            "key": "│ {#34}  shell   {#keys}│"
+        },
+        {
+            "type": "packages",
+            "key": "│ {#34}󰏓  pkgs    {#keys}│"
+        },
+        {
+            "type": "cpu",
+            "key": "│ {#34}󰍛  cpu     {#keys}│",
+            "showPeCoreCount": true
+        },
+        {
+            "type": "gpu",
+            "key": "│ {#34}󰍛  gpu     {#keys}│",
+            "showPeCoreCount": true
+        },
+        {
+            "type": "disk",
+            "key": "│ {#34}󰉉  disk    {#keys}│",
+            "folders": "/"
+        },
+        {
+            "type": "memory",
+            "key": "│ {#34}  memory  {#keys}│"
+        },
+        {
+            "type": "custom",
+            "key": "├────────────┤"
+        },
+        {
+            "type": "colors",
+            "key": "│ {#34} colors   {#keys}│",
+            "symbol": "circle"
+        },
+        {
+            "type": "custom",
+            "key": "╰────────────╯"
+        }
+    ]
+}
