@@ -139,17 +139,23 @@ obs-pipewire-audio-capture
 blender
 gimp
 krita
+vlc
+vlc-plugins-all
 obsidian
-audacoty
+audacity
 audacity4-bin
+keepassxc
+libreoffice-fresh
+# onlyoffice
+# wpsoffice
 
-# qemu-full
-# virt-manager
-# edk2-ovmf
-# swtpm
-# libosinfo
-# bridge-utils
-# dnsmasq
+qemu-full
+virt-manager
+edk2-ovmf
+swtpm
+libosinfo
+bridge-utils
+dnsmasq
 # sudo systemctl enable --now libvirtd.service
 # sudo usermod -aG libvirt $USER
 # sudo virsh net-start default
@@ -168,12 +174,5 @@ audacity4-bin
 ## To Try
 
 # mariadb/mysql
-# keepassxc
-# onepassword
-# libreoffice-fresh
-# onlyoffice
-# wpsoffice
 # gradle
 # maven
-# vlc
-# vlc-plugins-all
