@@ -170,8 +170,10 @@ audacity4-bin
 # mariadb/mysql
 # keepassxc
 # onepassword
-# libreoffice
-# openoffice
+# libreoffice-fresh
 # onlyoffice
+# wpsoffice
+# gradle
+# maven
 # vlc
 # vlc-plugins-all
