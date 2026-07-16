@@ -87,7 +87,7 @@ sudo systemctl enable ufw.service
 systemctl --user enable pipewire.service
 systemctl --user enable pipewire-pulse.service
 systemctl --user enable wireplumber.service
-systemctl --user enable hyprpolkitagent.service 
+systemctl --user enable hyprpolkitagent.service
 systemctl --user enable waybar.service
 
 echo "${GREEN}==>${NC} Activating scripts..."
@@ -105,8 +105,7 @@ else
 fi
 
 echo "${GREEN}==>${NC} Installing VSCode extensions..."
-# Diagnose-Ausgabe: Zeigt dir im Terminal, welchen Pfad das Skript genau prüft
-echo "Debugging: Looking for extensions file at: $DOTFILES_DIR/assets/extensions.txt"
+echo "Looking for extensions file at: $DOTFILES_DIR/assets/extensions.txt"
 
 if [ -f "$DOTFILES_DIR/assets/extensions.txt" ]; then
     while IFS= read -r ext || [ -n "$ext" ]; do
