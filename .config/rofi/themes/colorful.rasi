@@ -1,5 +1,5 @@
 * {
-    surface: #111418;
-    on-surface: #e1e2e8;
-    surface-container: #1d2024;
+    surface: #141318;
+    on-surface: #e5e1e9;
+    surface-container: #201f25;
 }

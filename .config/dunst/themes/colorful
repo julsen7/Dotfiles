@@ -22,16 +22,16 @@
     fullscreen = show
 
 [urgency_low]
-    background = "#111418"
-    foreground = "#e1e2e8"
+    background = "#141318"
+    foreground = "#e5e1e9"
 
 [urgency_normal]
-    background = "#111418"
-    foreground = "#e1e2e8"
+    background = "#141318"
+    foreground = "#e5e1e9"
     override_pause_level = 30
 
 [urgency_critical]
-    background = "#111418"
-    foreground = "#e1e2e8"
+    background = "#141318"
+    foreground = "#e5e1e9"
     timeout = 0
     override_pause_level = 60
